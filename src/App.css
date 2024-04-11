@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+:root {
+   --bg-color: #121212;
+   --bg-white-color: #F9FBFE;
+   --bg-grey-color : #202020;
+   --border-color: #eaeaeb;
+   --txt-color: #fff;
+   --txt-dark-color: #181D23;
+   --txt-a-color: #0CBBC5;
+   --txt-p-color: #96989B;
+   --txt-alt-color: #ffffff;
+   --form-border-color: #D5D5D7;
+   --form-focus-color: #fff;
+   --form-bg-color: transparent;
+   --form-txt-color: #fff;
+   --btn-txt-color: #ffffff;
+   --btn-bg-color: #0CBBC5;
+   --btn-bg-hover-color: #fff;
+   --element-bg-color: #80b1ff;
+   --element-darken-bg-color: #0CBBC5;
+   --element-lighten-bg-color: #e6f0ff;
+}
+
+body {
+    background-color: var(--bg-color);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: "Red Hat Text", sans-serif;
+    overflow: hidden;
+}
+
+body.show-scrollbar {
+    overflow: auto;
+}
+
+.no-outline {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.form-control {
+    caret-color: var(--form-txt-color);
+    background-color: transparent;
+    border: 1px solid var(--form-border-color);
+    color: var(--txt-color);
+
+}
+
+.form-control::placeholder {
+    color: var(--form-txt-color);
+}
+
+.form-control:focus {
+    background-color: var(--form-bg-color);
+    border-color: var(--form-focus-color);
+    color: var(--form-txt-color);
+}
+
+i {
+    color: var(--form-txt-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    transform: .5s;
+    text-transform: uppercase;
+}
+
+.navbar {
+    transition: all 0.5s;
+}
+
+#header.header-scrolled {
+    max-width: 70vw;
+    margin: 10px auto;
+    border-radius: 50px;
+    background-color: var(--bg-white-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.439);
+}
+
+
+
+.navbar-nav .nav-item .nav-link {
+    color: var(--form-txt-color);
+    transition: .5s;
+    text-transform:uppercase;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#header.header-scrolled .nav-link {
+    color: var(--txt-dark-color);
+}
+
+#header.header-scrolled .navbar-brand,
+#header.header-scrolled i {
+    color: var(--txt-dark-color-color);
+}
+#header.header-scrolled .logo{
+    width: 30px;
+}
+
+.navbar-nav .nav-item .nav-link.active {
+    font-weight: bolder;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: var(--element-darken-bg-color);
+    
+}
+
+#header.header-scrolled .nav-link:hover {
+    color: var(--element-darken-bg-color);
+}
+
+.navbar-brand {
+    color: var(--txt-color);
+    font-weight:bold;
+}
+.navbar-brand:hover{
+    color: var(--txt-color);
+}
+.logo{
+    width: 30px;
+}
+
+.offcanvas,
+.offcanvas-lg,
+.offcanvas-md,
+.offcanvas-sm,
+.offcanvas-xl,
+.offcanvas-xxl {
+    transition: 1s;
+    --bs-offcanvas-height: 100vh;
+}
+
+h5 {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: var(--txt-a-color);
+}
+
+.home {
+    background: url("./img/bg.jpg") top center;
+    background-size: cover;
+    
+}
+@media (min-width: 1024px) {
+    .home {
+      background-attachment: fixed;
+    }
+  }
+.home .container {
+    min-height: 100vh;
+    width: 100vw;
+    position: relative;
+  }
+.home h1 {
+    font-size: 70px;
+    color: var(--txt-color);
+    font-weight: bold;
+
+}
+
+.home p {
+    font-size: 18px;
+    color: var(--txt-p-color);
+
+}
+
+.btn-blue {
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: var(--btn-bg-color);
+    color: var(--btn-txt-color);
+    transition: .5s;
+
+}
+.btn-blue.chatinput {
+    border: 1px solid var(--form-border-color);
+    border-left: none;
+
+}
+.btn-blue:hover {
+    background-color: var(--btn-bg-hover-color);
+    color: var(--txt-a-color);
+}
+.about {
+    min-height: 80vh;
+}
+
+.services {
+    background-color: var(--bg-grey-color);
+    min-height: 90vh;
+    overflow: hidden;
+}
+
+.about h5,
+.services h5 {
+    color: var(--txt-a-color);
+    font-weight: bold;
+
+}
+
+.about p {
+    font-size: 20px;
+    color: var(--txt-color);
+    margin-bottom: 30px;
+    text-align: justify;
+}
+.serv-box {
+    background-color: var(--bg-color);
+}
+
+.serv-box i {
+    font-size: 5rem;
+    color: var(--txt-a-color);
+    margin-bottom: 30px;
+    transition: .5s;
+}
+
+
+.serv-box h1 {
+    color: var(--txt-color);
+    font-size: 22px;
+
+}
+
+.serv-box p {
+    text-align: justify;
+    color: var(--txt-p-color);
+    font-size: 18px;
+}
+
+.serv-box:hover {
+    border: inset 2px solid red;
+}
+
+.footer {
+    height: 9vh;
+    background-color: var(--bg-grey-color);
+    color: var(--txt-color);
+}
+.page-header h5{
+    color: var(--txt-color);
+}
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: var(--bg-orange-color);
+
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--bg-white-color);
+    border-radius: 20px;
+}
+
+.chat::-webkit-scrollbar,
+.offcanvas-body::-webkit-scrollbar {
+    background: transparent;
+
+}
+
+.chat::-webkit-scrollbar-thumb {
+
+    background-color: var(--bg-white-color);
+}
+
+.offcanvas-body::-webkit-scrollbar-thumb {
+
+    background-color: var(--bg-white-color);
+}
+
+.chatbot-container {
+    height: 100vh;
+    width: 100vw;
+    overflow-y: scroll;
+}
+
+.chatbot-container h5 {
+    color: var(--font-white-color);
+}
+.pdf{
+    height: 800px;
+    width: 80%;
+}
+.spinner-border {
+    color: var(--txt-a-color);
+}
+#howtouse img{
+  max-width: 90%;
+    height: auto;
+}
+
+@media (max-width: 992px) {
+    #howtouse img{
+        max-width: 100%;
+      }
+    .offcanvas {
+        background-color: var(--bg-color);
+    }
+
+    .offcanvas .navbar-nav .nav-item .nav-link {
+        color: var(--txt-color);
+        transition: .5s;
+    }
+
+    .navbar-nav .nav-item .nav-link:hover {
+        color: var(--txt-a-color);
+    }
+    .offcanvas .close {
+        color: var(--txt-color);
+    }
+    .home h1 {
+        font-size: 50px;
+    }
+
+    .home p {
+        font-size: 15px;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+
+    .about p,
+    .serv-box p {
+        font-size: 16px;
+    }
+
+    .img-container button {
+        width: max-content;
+    }
+
+    .form-container form h5 {
+        font-size: 30px;
+    }
+
+    .form-container form p {
+        font-size: 16px;
+    }
+
+    .form-container form {
+        max-width: 350px;
+    }
+}
