@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap');
 :root {
    --bg-color: #121212;
    --bg-white-color: #F9FBFE;
@@ -29,11 +30,17 @@ body {
     font-family: "Red Hat Text", sans-serif;
     overflow: hidden;
 }
-
+body[lang="ar"] {
+    font-family: "Noto Kufi Arabic", sans-serif;
+}
+.rtl {
+    direction: rtl;
+  }
 body.show-scrollbar {
     overflow: auto;
 }
 
+  
 .no-outline {
     outline: none !important;
     box-shadow: none !important;
@@ -85,7 +92,7 @@ button {
 
 
 .navbar-nav .nav-item .nav-link {
-    color: var(--form-txt-color);
+    color: var(--txt-color);
     transition: .5s;
     text-transform:uppercase;
     font-size: 13px;
@@ -244,10 +251,34 @@ h5 {
     height: 9vh;
     background-color: var(--bg-grey-color);
     color: var(--txt-color);
+    font-size: 15px;
 }
 .page-header h5{
     color: var(--txt-color);
 }
+.dropdown-menu{
+    background-color: var(--bg-white-color) ;
+
+}
+.dropdown:hover>.dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown>.dropdown-toggle:active {
+      pointer-events: none;
+  }
+.drop-btn:hover{
+    color: var(--txt-a-color);
+}
+
+.drop-btn{
+    transition: .5s;
+    border: none;
+    background-color: transparent;
+    font-size: 13px;
+    font-weight: bold;
+}
+
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -289,20 +320,25 @@ h5 {
     height: 800px;
     width: 80%;
 }
-.spinner-border {
-    color: var(--txt-a-color);
-}
+
 #howtouse img{
   max-width: 90%;
     height: auto;
 }
-
+.chatinput{
+    height: 38px;
+}
 @media (max-width: 992px) {
+    #header.header-scrolled {
+        max-width: 90vw;}
     #howtouse img{
         max-width: 100%;
       }
     .offcanvas {
         background-color: var(--bg-color);
+    }
+    .drop-btn{
+        text-align: center;
     }
 
     .offcanvas .navbar-nav .nav-item .nav-link {

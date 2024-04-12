@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import {
   BrowserRouter,
@@ -14,8 +14,10 @@ import Footer from "./components/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import DocumentGenerator from "./pages/DocumentGenerator";
+import { useTranslation } from "react-i18next";
 
 AOS.init({ duration: 1000 });
+
 
 function NavigationNavbar() {
   const location = useLocation();
@@ -30,6 +32,20 @@ function NavigationFooter() {
   return isFooterVisible ? <Footer /> : null;
 }
 function App() {
+  
+  const [t, i18n] = useTranslation();
+  useEffect(() => {
+    document.documentElement.lang = i18n.language;
+  }, [i18n.language]);
+  useEffect(() => {
+    // Add RTL class to HTML element when language is Arabic
+    if (i18n.language === "ar") {
+      document.documentElement.classList.add("rtl");
+    } else {
+      // Remove RTL class when language is not Arabic
+      document.documentElement.classList.remove("rtl");
+    }
+  }, [i18n.language]);
   return (
     <BrowserRouter>
       <NavigationNavbar />

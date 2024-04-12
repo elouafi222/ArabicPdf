@@ -1,14 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import logo from "../img/Logo.png";
 import PDFViewer from "../components/PDFViewer";
-
+import { useTranslation } from "react-i18next";
 function DocumentGenerator() {
+  const [t, i18n] = useTranslation();
   const [generatedPDF, setGeneratedPDF] = useState(null);
   const [inputText, setInputText] = useState("");
   const [isGenerating, setIsGenerating] = useState(false);
-
+  useEffect(() => {
+    // Add RTL class to HTML element when language is Arabic
+    if (i18n.language === "ar") {
+      document.documentElement.classList.add("rtl");
+    } else {
+      // Remove RTL class when language is not Arabic
+      document.documentElement.classList.remove("rtl");
+    }
+  }, [i18n.language]);
   const generatePDF = async () => {
     setIsGenerating(true);
     try {
@@ -62,39 +71,44 @@ function DocumentGenerator() {
             className="mt-2 mb-2 px-3 px-lg-5  d-flex h-10 align-items-center"
           >
             <input
-              rows="5"
-              id="textSpeech"
-              className="form-control no-outline rounded-start-4 rounded-end-0"
-              placeholder="Type here .. "
-              required
-              value={inputText}
-              onChange={handleInputChange}
-            />
+  rows="5"
+  id="textSpeech"
+  className={`form-control no-outline  ${i18n.language === 'ar' ? 'rounded-end-4 rounded-start-0' : 'rounded-start-4 rounded-end-0'}`}
+  placeholder={t('docgenerator.placeholder')}
+  required
+  value={inputText}
+  onChange={handleInputChange}
+/>
 
-            <div className="input-group-append">
-              <button
-                id="sendQuestionButton"
-                className="btn btn-blue chatinput no-outline rounded-start-0 rounded-end-4"
-                onClick={generatePDF}
-              >
-                <span>{isGenerating ? 'Generating...' : 'Generate'}</span>
-              </button>
-            </div>
+<div className="input-group-append">
+  <button
+    id="sendQuestionButton"
+    className={`btn btn-blue chatinput no-outline ${i18n.language === 'ar' ? 'rounded-start-4 rounded-end-0' : 'rounded-start-0 rounded-end-4'} `}
+    onClick={generatePDF}
+  >
+    <span className="">{isGenerating ? (
+        <>
+        <span className="d-none d-lg-block">{t('docgenerator.generating')}</span>
+       <div className=" spinner-border spinner-border-sm d-block d-lg-none" role="status">
+       <span className="visually-hidden">Loading...</span>
+     </div></>
+    ) : (
+      <>
+       <span  className="d-none d-lg-block"> {t('docgenerator.generate')}</span>
+        <i className="fa-solid py-1 fa-paper-plane d-block d-lg-none"></i>
+      </>
+    )}</span>
+  </button>
+</div>
+
           </motion.div>
         </div>
         <div className="col-md-12 d-flex flex-column align-items-center justify-content-center">
-          {isGenerating && <Spinner />}
           {generatedPDF && <PDFViewer pdfUrl={generatedPDF} />}
         </div>
       </div>
     </div>
   );
 }
-
-const Spinner = () => (
-  <div className="spinner-border " role="status">
-    <span className="visually-hidden">Loading...</span>
-  </div>
-);
 
 export default DocumentGenerator;

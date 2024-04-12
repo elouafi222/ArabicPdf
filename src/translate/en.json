@@ -1,0 +1,41 @@
+{
+  "navbar": {
+    "home" : "Home",
+    "about" : "About",
+    "features" : "FEATURES",
+    "how" : "How to use ?",
+    "language":"Language"
+  },
+    "home": {
+      "welcome": "Welcome to arabicPDF",
+      "revolution": "Morocco's AI Revolution Starts Here",
+      "description": "Welcome to our online platform designed to streamline the process of generating Moroccan documents effortlessly.",
+      "get_started": "Get Started"
+    },
+    "about": {
+      "title": "About Us",
+      "content": "ArabicPdf is your go-to destination for accessing a vast collection of Moroccan documents generated through artificial intelligence. We pride ourselves on being a reliable and comprehensive source for a wide range of documents in Arabic. From legal documents to business reports, educational materials, health resources, and more, ArabicPdf aims to streamline access to crucial information. Our user-friendly interface makes browsing and searching for documents effortless. Whether you're an individual seeking specific information or an organization in need of comprehensive data, ArabicPdf is here to serve your needs. Join us in our mission to promote accessibility and ease of access to Moroccan documents, empowering users with knowledge at their fingertips."
+    },
+    "services": {
+      "title": "Our features",
+      "time_effort_saving": "Time and Effort Saving",
+      "time_effort_saving_description": "By using our service, you can say goodbye to the hassle of manually filling out paperwork. With just a few clicks, you can generate the document you need, saving valuable time and effort that can be better spent on other tasks.",
+      "variety_of_documents": "Variety of Documents",
+      "variety_of_documents_description": "Whether you need to generate residence permits, birth certificates, or any other essential document, our service has you covered. We offer a comprehensive range of document templates, ensuring that you can access exactly what you need, when you need it.",
+      "accuracy_compliance": "Accuracy and Compliance",
+      "accuracy_compliance_description": "We prioritize accuracy and compliance with Moroccan legal standards. Our templates are meticulously crafted to align with the latest regulations and requirements, giving you peace of mind that your documents meet all necessary criteria.",
+      "secure_confidential": "Secure and Confidential",
+      "secure_confidential_description": "We take the security and confidentiality of your personal information seriously. Our platform employs robust encryption protocols to safeguard your data, ensuring that it remains private and protected at all times."
+    },
+    "howtouse": {
+      "title": "How to use ?",
+      "content": "To use our document generator, simply enter your information in the provided input field. Specify the type of document you need, whether it's a national identity card (CNI), residence permit, birth certificate, or any other document required. Fill in the relevant details such as your full name, date of birth, address, and any other necessary information. Once you've entered all your information, click the 'Generate' button. Our system will process your data and generate the requested document in PDF format. You can then download and print the document for your records or use it as needed."
+    },
+    "footer" : " . All Rights Reserved",
+    "docgenerator" : {
+      "placeholder" : "Type here ... ",
+      "generate" : "Generate",
+      "generating": "Generating"
+    }
+  }
+  

@@ -4,7 +4,9 @@ import Services from "../components/Services";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import HowToUse from "../components/HowToUse";
+import { useTranslation } from "react-i18next";
 function Home() {
+  const [t, i18n] = useTranslation();
   return (
     <>
       <div id="home" className="home">
@@ -14,18 +16,17 @@ function Home() {
             animate={{ y: 0 }}
             transition={{ duration: 4, type: "spring" }}
           >
-            Welcome to arabicPDF
+           {t('home.welcome')}
           </motion.h5>
           <h1>
-            Morocco's AI Revolution <br />
-            Starts Here
+          {t('home.revolution')}
           </h1>
           <motion.p
             initial={{ y: "100vh" }}
             animate={{ y: 0 }}
             transition={{ duration: 4, type: "spring" }}
           >
-            Welcome to our online platform designed to streamline the process of generating Moroccan documents effortlessly.
+           {t('home.description')}
           </motion.p>
          <motion.span initial={{ y: "100vh" }}
             animate={{ y: 0 }}
@@ -35,7 +36,7 @@ function Home() {
             to="/documentGenerator"
             className="btn btn-blue btn-lg rounded-5 px-5"
           >
-            Get Started
+            {t('home.get_started')}
           </Link>
          </motion.span>
         </div>

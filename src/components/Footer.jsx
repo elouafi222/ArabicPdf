@@ -1,6 +1,8 @@
 import React from "react";
-
+import { useTranslation } from "react-i18next";
+ 
 function Footer() {
+  const [t, i18n] = useTranslation();
   return (
     <div className="footer d-flex justify-content-center align-items-center">
       <p className="m-0">
@@ -8,7 +10,7 @@ function Footer() {
         <strong>
           <span>arabicPDF</span>
         </strong>
-        . All Rights Reserved
+        {" "}   {t('footer')}
       </p>
     </div>
   );

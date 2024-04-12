@@ -1,0 +1,41 @@
+{
+  "navbar": {
+    "home": "Accueil",
+    "about": "À propos",
+    "features": "FONCTIONNALITÉS",
+    "how": "Comment utiliser ?",
+    "language": "Langue"
+  },
+    "home": {
+      "welcome": "Bienvenue sur arabicPDF",
+      "revolution": "La révolution de l'IA au Maroc commence ici",
+      "description": "Bienvenue sur notre plateforme en ligne conçue pour simplifier le processus de génération de documents marocains sans effort.",
+      "get_started": "Commencer"
+    },
+    "about": {
+      "title": "À propos de nous",
+      "content": "ArabicPdf est votre destination de choix pour accéder à une vaste collection de documents marocains générés par intelligence artificielle. Nous sommes fiers d'être une source fiable et exhaustive pour une large gamme de documents en arabe. Des documents juridiques aux rapports d'affaires, en passant par les ressources éducatives, sanitaires et bien d'autres encore, ArabicPdf vise à simplifier l'accès à des informations cruciales. Notre interface conviviale facilite la navigation et la recherche de documents. Que vous soyez un particulier à la recherche d'informations spécifiques ou une organisation ayant besoin de données complètes, ArabicPdf est là pour répondre à vos besoins. Rejoignez-nous dans notre mission de promouvoir l'accessibilité et la facilité d'accès aux documents marocains, en donnant aux utilisateurs le savoir au bout de leurs doigts."
+    },
+    "services": {
+      "title": "Nos fonctionnalités",
+      "time_effort_saving": "Économie de temps et d'efforts",
+      "time_effort_saving_description": "En utilisant notre service, vous pouvez dire adieu à la corvée de remplir manuellement des formulaires. En quelques clics seulement, vous pouvez générer le document dont vous avez besoin, en économisant un temps et des efforts précieux qui peuvent être mieux utilisés pour d'autres tâches.",
+      "variety_of_documents": "Variété de documents",
+      "variety_of_documents_description": "Que vous ayez besoin de générer des permis de séjour, des certificats de naissance ou tout autre document essentiel, notre service vous couvre. Nous proposons une gamme complète de modèles de documents, garantissant que vous pouvez accéder exactement à ce dont vous avez besoin, quand vous en avez besoin.",
+      "accuracy_compliance": "Précision et conformité",
+      "accuracy_compliance_description": "Nous accordons la priorité à la précision et à la conformité avec les normes légales marocaines. Nos modèles sont soigneusement conçus pour être conformes aux dernières réglementations et exigences, vous donnant l'assurance que vos documents respectent tous les critères nécessaires.",
+      "secure_confidential": "Sécurisé et confidentiel",
+      "secure_confidential_description": "Nous prenons la sécurité et la confidentialité de vos informations personnelles très au sérieux. Notre plateforme utilise des protocoles de cryptage robustes pour protéger vos données, garantissant qu'elles restent privées et protégées en tout temps."
+    },
+    "howtouse": {
+      "title": "Comment utiliser ?",
+      "content": "Pour utiliser notre générateur de documents, il vous suffit d'entrer vos informations dans le champ prévu à cet effet. Spécifiez le type de document dont vous avez besoin, qu'il s'agisse d'une carte nationale d'identité (CNI), d'un permis de séjour, d'un acte de naissance ou de tout autre document requis. Remplissez les détails pertinents tels que votre nom complet, votre date de naissance, votre adresse et toute autre information nécessaire. Une fois que vous avez saisi toutes vos informations, cliquez sur le bouton 'Générer'. Notre système traitera vos données et générera le document demandé au format PDF. Vous pourrez ensuite télécharger et imprimer le document pour vos archives ou l'utiliser selon vos besoins."
+    },
+    "footer" :  "Tous droits réservés.",
+    "docgenerator": {
+      "placeholder": "Saisissez ici ...",
+      "generate": "Générer",
+      "generating": "En cours de génération"
+    }
+    
+  }
